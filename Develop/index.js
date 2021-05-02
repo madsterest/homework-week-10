@@ -15,7 +15,12 @@ const questions = [
   },
   { name: "packages", message: "What programs does the program need to run?" },
   { name: "collaborators", message: "Who collaborated on the project?" },
-  { name: "badge", message: "What license would you like to use?" },
+  {
+    type: "rawlist",
+    name: "badge",
+    message: "What license would you like to use?",
+    choices: ["MIT", "GNU GPL", "Apache", "Boost", "Mozilla", "The Unlicense"],
+  },
   { name: "username", message: "What is your GitHub username?" },
   { name: "repo", message: "What is the name of your repository?" },
 ];
