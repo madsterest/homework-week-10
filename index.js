@@ -5,16 +5,38 @@ const inquirer = require("inquirer");
 
 // TODO: Create an array of questions for user input
 const questions = [
-  { name: "title", message: "What is the title of your project?" },
-  { name: "description", message: "Give a brief description of your project" },
-  { name: "motivation", message: "What was your motivation for development?" },
+  {
+    type: "input",
+    name: "title",
+    message: "What is the title of your project?",
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "Give a brief description of your project",
+  },
+  {
+    type: "input",
+    name: "motivation",
+    message: "What was your motivation for development?",
+  },
   { name: "function", message: "What tasks does your program accomplish?" },
   {
+    type: "input",
     name: "useage",
     message: "How does a user operate your product?",
   },
-  { name: "packages", message: "What programs does the program need to run?" },
+  {
+    type: "input",
+    name: "packages",
+    message: "What programs does the program need to run?",
+  },
   { name: "collaborators", message: "Who collaborated on the project?" },
+  {
+    type: "input",
+    name: "test",
+    message: "What test are available and how do they function?",
+  },
   {
     type: "rawlist",
     name: "badge",
@@ -29,8 +51,8 @@ const questions = [
       "None",
     ],
   },
-  { name: "username", message: "What is your GitHub username?" },
-  { name: "email", message: "What is your email address?" },
+  { type: "input", name: "username", message: "What is your GitHub username?" },
+  { type: "input", name: "email", message: "What is your email address?" },
 ];
 
 // TODO: Create a function to write README file
