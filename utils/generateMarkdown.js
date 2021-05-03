@@ -47,7 +47,7 @@ function renderLicenseSection(license) {
     license = "";
     return license;
   } else {
-    return `## License:<br/>
+    return `## License:
   Licensed under ${license}.<br/>
   For more information, visit this link.<br/>
   ${renderLicenseLink(license)}
@@ -61,33 +61,40 @@ function generateMarkdown(data) {
 
 ${renderLicenseBadge(data.badge)}
 
- ## Description:<br/>
+ ##Description:
+ <br/>
  ${data.description}
  ${data.motivation}
  ${data.function}
 
- ## Table of Contents:<br/>
- [Installation](##Installation)<br/>
- [Useage](##Useage)<br/>
- [Contributing](##Contributing)<br/>
- [Tests](##Tests)<br/>
- [License](##License)<br/>
- [Questions](##Questions)<br/>
+ ##Table of Contents:
+ <br/>
+ [Installation](#Installation:)<br/>
+ [Useage](#Useage:)<br/>
+ [Contributing](#Contributing:)<br/>
+ [Tests](#Tests:)<br/>
+ [License](#License:)<br/>
+ [Questions](#Questions:)<br/>
 
- ## Installation:<br/>
+ ## Installation:
+ <br/>
  ${data.packages}
 
- ## Useage:<br/>
+ ## Useage:
+ <br/>
  ${data.useage}
 
- ## Contributing:<br/>
+ ## Contributing:
+ <br/>
  ${data.collaborators}
 
- ## Tests:<br/>
+ ## Tests:
+ <br/>
  ${data.test}
 
  ${renderLicenseSection(data.badge)}
-## Questions:<br/>
+## Questions:
+<br/>
 For more examples of my work, please visit my GitHub at [${
     data.username
   }](https://github.com/${data.username})<br/>
