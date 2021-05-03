@@ -20,7 +20,11 @@ const questions = [
     name: "motivation",
     message: "What was your motivation for development?",
   },
-  { name: "function", message: "What tasks does your program accomplish?" },
+  {
+    type: "input",
+    name: "function",
+    message: "What tasks does your program accomplish?",
+  },
   {
     type: "input",
     name: "useage",
@@ -31,7 +35,11 @@ const questions = [
     name: "packages",
     message: "What programs does the program need to run?",
   },
-  { name: "collaborators", message: "Who collaborated on the project?" },
+  {
+    type: "input",
+    name: "collaborators",
+    message: "Who collaborated on the project?",
+  },
   {
     type: "input",
     name: "test",

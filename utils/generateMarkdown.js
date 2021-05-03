@@ -47,10 +47,11 @@ function renderLicenseSection(license) {
     license = "";
     return license;
   } else {
-    return `## License:
+    return `# License
   Licensed under ${license}.<br/>
   For more information, visit this link.<br/>
   ${renderLicenseLink(license)}
+  
   `;
   }
 }
@@ -61,43 +62,48 @@ function generateMarkdown(data) {
 
 ${renderLicenseBadge(data.badge)}
 
- ##Description:
+ # Description
  <br/>
  ${data.description}
  ${data.motivation}
  ${data.function}
 
- ##Table of Contents:
+ # Table of Contents
+ 
+ * [Installation](#installation)
  <br/>
- [Installation](#Installation:)<br/>
- [Useage](#Useage:)<br/>
- [Contributing](#Contributing:)<br/>
- [Tests](#Tests:)<br/>
- [License](#License:)<br/>
- [Questions](#Questions:)<br/>
+ * [Useage](#useage)
+ <br/>
+ * [Contributing](#contributing)
+ <br/>
+ * [Tests](#tests)
+ <br/>
+ * [License](#license)
+ <br/>
+ * [Questions](#questions)
 
- ## Installation:
- <br/>
+
+ # Installation
  ${data.packages}
 
- ## Useage:
- <br/>
+
+ # Useage
  ${data.useage}
+ 
 
- ## Contributing:
- <br/>
+ # Contributing
  ${data.collaborators}
+ 
 
- ## Tests:
- <br/>
+ # Tests
  ${data.test}
+ 
 
  ${renderLicenseSection(data.badge)}
-## Questions:
-<br/>
+# Questions
 For more examples of my work, please visit my GitHub at [${
     data.username
-  }](https://github.com/${data.username})<br/>
+  }](https://github.com/${data.username})
 or contact me at
 ${data.email}
 `;
